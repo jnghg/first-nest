@@ -13,7 +13,7 @@ export class MoviesService {
 
   // parseInt(id) -> +id 로 가능
   getOne(id: number): Movie {
-    const movie = this.movies.find((movie) => movie.id === +id);
+    const movie = this.movies.find((movie) => movie.id === id);
 
     if (!movie) {
       throw new NotFoundException(`Movie with ID ${id} not found`);
